@@ -18,6 +18,9 @@ nav a{
     float:left;
     text-decoration:none;
 }
+nav a:hover{
+    border: 2px solid 800080;
+}
 .botao{
     padding: 10px 16px;
     font-size: 16px;
