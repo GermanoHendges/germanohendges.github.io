@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 html{
-    border-sizing:border-box;
     font-size: 10px;
     font-family: "Open Sans", sans-serif;
 }
@@ -17,6 +17,10 @@ nav a{
     display: block;
     float:left;
     text-decoration:none;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 nav a:hover{
     border: 2px solid 800080;
@@ -37,14 +41,11 @@ nav a:hover{
 .jogo{
     font-size:15px;
     text-align: center;
-    padding-color: blue;
 }
 .recomendações{
-
     text-align:center;
     width:500;
     height:150;
-
 }
 .recomendações img{
     height: 100px;
