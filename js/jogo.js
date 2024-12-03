@@ -138,8 +138,8 @@
                 if (time < 0) {
                     clearInterval(interval);
                     countdownElement.innerHTML = "Tempo esgotado!";
-                    localStorage.setItem(player1Score);
-                    localStorage.setItem(player2Score);
+                    localStorage.setItem("player1Score",player1Score);
+                    localStorage.setItem("player1Score",player2Score);
                     window.location.href="../html/telaVitoria.html"
                 }
             }, 1000);
