@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Vitória</title>
+    <script>
+        function getNome(){
+            let ganhador;
+            switch (localStorage.getItem("player2Index")){
+                case "0"://inter
+                    ganhador = "Internacional";
+                    document.getElementById("timeVencedor").style.color = "#C8102E"; // Cor do Internacional
+                    break;
+                case "1"://gremio
+                    ganhador = "Grêmio";
+                    document.getElementById("timeVencedor").style.color = "#003DA5"; // Cor do Grêmio
+                    break;
+                case "2"://flamengo
+                    ganhador = "Flamengo";
+                    document.getElementById("timeVencedor").style.color = "#FF0000"; // Cor do Flamengo
+                    break;
+                case "3"://cruzeiro
+                    ganhador = "Cruzeiro";
+                    document.getElementById("timeVencedor").style.color = "#003DA5"; // Cor do Cruzeiro
+                    break;
+                case "4"://juventude
+                    ganhador = "Juventude";
+                    document.getElementById("timeVencedor").style.color = "#007A33"; // Cor do Juventude
+                    break;
+                case "5"://GaloFC
+                    ganhador = "GaloFC";
+                    document.getElementById("timeVencedor").style.color = "#A52A2A"; // Cor do GaloFC
+                    break;
+            }
+            document.getElementById("timeVencedor").innerHTML = ganhador + " é o vencedor!";
+        }
+
+        function decideGanhador(){
+            let jogador1 = localStorage.getItem("player1Score");
+            let jogador2 = localStorage.getItem("player2Score");
+            let ganhador;
+            if(jogador1 > jogador2){
+                ganhador = localStorage.getItem("player1Index");
+            } else {
+                ganhador = localStorage.getItem("player2Index");
+            }
+            getNome(ganhador);
+        }
+
+        function voltarAoMenu() {
+            window.location.href = "../html/menu.html";
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .action-button {
+            padding: 15px;
+            font-size: 22px;
+            color: #fff;
+            background-color: #d4af37;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.4);
+        }
+        .action-button:hover {
+            background-color: #cba135;
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(212, 175, 55, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="action-button" onclick="voltarAoMenu()">Voltar ao Menu</button>
+    </div>
+    <h1 id="timeVencedor"></h1>
+</body>
+</html>
