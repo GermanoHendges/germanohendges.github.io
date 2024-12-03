@@ -1,0 +1,128 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700;800&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            transition: background-color 0.5s ease;
+        }
+
+    
+        .player-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .player {
+            display: flex;
+            align-items: center;
+        }
+
+        .player-ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            margin: 0 10px;
+        }
+
+        .arrow {
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        
+
+        .action-button {
+            margin:0;
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            font-size: 22px;
+            color: #fff;
+            background-color: #d4af37;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .action-button:hover {
+            background-color: #cba135;
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(212, 175, 55, 0.6);
+        }
+
+        #scoreboard {
+            font-family: 'Poppins';
+            font-weight: bold;
+            font-size: 31px;
+            color: white;
+            display:inline-block;
+            background-color: black;
+            display: flex; align-items: center; justify-content: center;
+        }
+        #player1Score{
+            word-spacing: 30px;
+        }
+        
+        #contador{
+            margin-left:100px;
+            margin-top:-5px ;
+        }
+        .placar{
+            width:50%;
+            height:50%;
+        }
+
+        canvas {
+            border: 1px solid black;
+            background-color: green;
+            display: block;
+            margin: 0 auto;
+        }
+    
+        .game-container {
+            width: 100%;
+            height: 100%;
+    
+        }
+            .overlay-text {
+                position: fixed; 
+                top: 50%;/* Centraliza verticalmente */
+                left: 50%; /* Centraliza horizontalmente */
+                transform: translate(-50%, -50%); /* Ajuste para centralizar */
+                text-shadow: black 2px 5px;
+                color: white; 
+                font-weight: bold;
+                font-size: 75px; 
+                padding: 20px; 
+                border-radius: 8px; 
+                display: none; /* Começa como invisível */
+                opacity: 0; /* Começa com opacidade 0 */
+                transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+                z-index: 1000; 
+            }
+        #player2Score{
+            margin-left: 30px;
+            word-spacing: 30px;
+
+        }
+        .button-container{
+            display: flex; align-items: center; justify-content: center;
+        }
+        
+        

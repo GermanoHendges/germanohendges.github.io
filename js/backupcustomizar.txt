@@ -1,0 +1,53 @@
+function voltarAoMenu() {
+    window.location.href = "../html/menu.html";
+}
+let index = docum
+// Função para salvar configurações no localStorage
+function salvarConfiguracoes() {
+    const corJogador1 = document.getElementById("player1").style.backgroundColor || "#000";
+    const corJogador2 = document.getElementById("player2").style.backgroundColor || "#000";
+    const estadioSelecionado = document.body.style.backgroundImage || ""; // Armazenar a imagem do fundo
+
+    localStorage.setItem("corJogador1", corJogador1);
+    localStorage.setItem("corJogador2", corJogador2);
+    localStorage.setItem("estadioSelecionado", estadioSelecionado); // Salvar estádio
+    alert("Configurações salvas com sucesso!");
+    IniciarJogo();
+}
+
+// Função para redirecionar ao jogo
+function IniciarJogo() {
+    console.log("LéoPicao");
+    window.location.href = "../html/jogo.html";
+}
+
+// Função para alterar o fundo do estádio
+function changeStadiumBackground(index) {
+
+    const stadiums = [
+
+        { name: "Arena do Grêmio", image: "url('../imagens/arenagremio.png')" },
+
+        { name: "Beira Rio", image: "url('../imagens/beirario.png')" },
+
+        { name: "Maracanã", image: "url('../imagens/maracana.png')" },
+
+        { name: "Mineirão", image: "url('../imagens/mineirao.png')" }
+
+    ];
+    
+
+    
+
+    document.body.style.backgroundImage = stadiums[index].image; // Muda o fundo
+
+    alert("Estádio escolhido: " + stadiums[index].name);
+
+    
+
+    // Armazenar o índice do estádio no localStorage
+
+    localStorage.setItem("estadioSelecionadoIndex", index);
+    console.log(localStorage.getItem("estadioSelecionadoIndex"));   
+
+}

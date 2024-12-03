@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTMASTER - Menu</title>
+    <link rel="stylesheet" href="../css/stylemenu.css">
+</head>
+<body>
+  
+    <audio autoplay> 
+        <source src="../djPaese/menu2.ogg" type="audio/ogg">
+        <source src="../djPaese/menu2.mp3" type="audio/mpeg">
+        Teu navegador não suporta nossa máquina mortífera.
+      </audio>
+    <video class="fundo" src="../imagens/fundomaraca.mp4" autoplay muted loop playsinline></video>
+
+    <div class="menu-container" >
+        <img src="../imagens/logo.png" alt="Logo FutMaster" class="logo">
+        <button class="menu-button" onclick="handleButtonClick('JOGAR')">JOGAR</button>
+        <button class="menu-button" onclick="handleButtonClick('OPÇÕES')">OPÇÕES</button>
+        <button class="menu-button" onclick="handleButtonClick('COMO JOGAR')">COMO JOGAR</button>
+        <button class="menu-button" onclick="handleButtonClick('CRÉDITOS')">CRÉDITOS</button>
+    </div>
+
+    <script src="../js/menujava.js"></script>
+</body>
+</html>

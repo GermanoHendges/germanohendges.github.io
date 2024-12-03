@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutMaster - Customização e Jogo</title>
+    <link rel="stylesheet" href="../css/stylejogo.css">
+</head>
+<body>
+
+    
+    <div class="game-container">
+        
+        <div id="scoreboard">
+            
+            <span id="player1Score">0</span>  <span id="player2Score">0</span>
+            <div id="contador">5:00</div>
+
+        </div>
+        
+        
+        <canvas id="gameCanvas" width="1000" height="600"></canvas>
+        <div class="button-container">
+            <button class="action-button" onclick="voltarAoMenu()">Voltar ao Menu</button>
+        </div>
+        
+        
+        
+    </div>
+    <div id="temporaryText" class="overlay-text">GOOOOL</div>
+    <audio id="somGol" src="../djPaese/comemoração gol.mp3"></audio> 
+</body>
+  
+<script src="../js/jogo.js"></script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutMaster - Customização e Jogo</title>
+    <link rel="stylesheet" href="../css/stylecustomizar.css">
+</head>
+<body>
+    <h1>Customização de Jogadores</h1>
+
+    <!-- Customização dos Jogadores -->
+    <div class="player-container">
+        <div class="player">
+            <button onclick="changeUniform(0, -1)" class="arrow">&lt;</button>
+            <canvas id="canvasPlayer1" width="100" height="100" style="border: 1px solid black;"></canvas>
+            <button onclick="changeUniform(0, 1)" class="arrow">&gt;</button>
+        </div>
+    
+        <div class="player">
+            <button onclick="changeUniform(1, -1)" class="arrow">&lt;</button>
+            <canvas id="canvasPlayer2" width="100" height="100" style="border: 1px solid black;"></canvas>
+            <button onclick="changeUniform(1, 1)" class="arrow">&gt;</button>
+        </div>
+    </div>
+
+    <!-- Escolha do Estádio -->
+    <div class="background-container">
+        <h2>Escolha qual Estádio deseja jogar.</h2>
+        <button class="action-button" onclick="changeStadiumBackground(0)">Arena do Grêmio</button>
+        <button class="action-button" onclick="changeStadiumBackground(1)">Beira Rio</button>
+        <button class="action-button" onclick="changeStadiumBackground(2)">Maracanã</button>
+        <button class="action-button" onclick="changeStadiumBackground(3)" >Mineirão</button>
+    </div>
+
+    <!-- Botões de Navegação -->
+    <div class="button-container">
+        <button class="action-button" onclick="voltarAoMenu()">Voltar ao Menu</button>
+        <button class="action-button" onclick="salvarConfiguracoes(); IniciarJogo()">Iniciar Jogo</button>
+    </div>
+
+    <script src="../js/costumizar.js"></script>
+</body>
+</html>

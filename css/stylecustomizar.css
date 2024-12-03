@@ -1,0 +1,70 @@
+/* Reset e estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+h1, h2 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.action-button {
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #d4af37;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.4);
+    
+}
+
+.action-button:hover {
+    background-color: #cba135;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(212, 175, 55, 0.6);
+}
+.player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow {
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}   
+canvas {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0; /* Cor de fundo para visualização */
+}
+.button-container{
+    position:relative;
+    z-index: +1;
+}

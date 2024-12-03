@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTMASTER - Opções</title>
+    <link rel="stylesheet" href="../css/styleopcoes.css">
+</head>
+<body>
+    <div class="options-container">
+        <button class="menu-button" onclick="voltarAoMenu()">Voltar ao Menu</button>
+        <button class="menu-button" id="somButton" onclick="toggleSom()">Som: Ligado</button>
+        <label for="volume" class="volume-label">Volume</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50" onchange="ajustarVolume(this.value)">
+    </div>
+
+    <audio id="backgroundAudio" autoplay loop>
+        <source src="../djPaese/menu.ogg" type="audio/ogg">
+        <source src="../djPaese/menu.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script src="../js/opcoes.js"></script>
+</body>
+</html>
