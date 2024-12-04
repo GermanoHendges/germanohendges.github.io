@@ -5,52 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Vitória</title>
     <script>
-        function getNome(){
+        function getNome(ganhadorIndex) {
             let ganhador;
-            switch (localStorage.getItem("player2Index")){
-                case "0"://inter
+            const timeVencedor = document.getElementById("timeVencedor");
+            switch (ganhadorIndex) {
+                case "0": // Internacional
                     ganhador = "Internacional";
-                    document.getElementById("timeVencedor").style.color = "#C8102E"; // Cor do Internacional
+                    timeVencedor.style.color = "#C8102E"; // Cor do Internacional
                     break;
-                case "1"://gremio
+                case "1": // Grêmio
                     ganhador = "Grêmio";
-                    document.getElementById("timeVencedor").style.color = "#003DA5"; // Cor do Grêmio
+                    timeVencedor.style.color = "#003DA5"; // Cor do Grêmio
                     break;
-                case "2"://flamengo
+                case "2": // Flamengo
                     ganhador = "Flamengo";
-                    document.getElementById("timeVencedor").style.color = "#FF0000"; // Cor do Flamengo
+                    timeVencedor.style.color = "#FF0000"; // Cor do Flamengo
                     break;
-                case "3"://cruzeiro
+                case "3": // Cruzeiro
                     ganhador = "Cruzeiro";
-                    document.getElementById("timeVencedor").style.color = "#003DA5"; // Cor do Cruzeiro
+                    timeVencedor.style.color = "#003DA5"; // Cor do Cruzeiro
                     break;
-                case "4"://juventude
+                case "4": // Juventude
                     ganhador = "Juventude";
-                    document.getElementById("timeVencedor").style.color = "#007A33"; // Cor do Juventude
+                    timeVencedor.style.color = "#007A33"; // Cor do Juventude
                     break;
-                case "5"://GaloFC
+                case "5": // GaloFC
                     ganhador = "GaloFC";
-                    document.getElementById("timeVencedor").style.color = "#A52A2A"; // Cor do GaloFC
+                    timeVencedor.style.color = "#A52A2A"; // Cor do GaloFC
                     break;
+                default:
+                    ganhador = "Desconhecido";
+                    timeVencedor.style.color = "#000000"; // Cor padrão
             }
-            document.getElementById("timeVencedor").innerHTML = ganhador + " é o vencedor!";
+            timeVencedor.innerHTML = ganhador + " é o vencedor!";
         }
 
-        function decideGanhador(){
-            let jogador1 = localStorage.getItem("player1Score");
-            let jogador2 = localStorage.getItem("player2Score");
-            let ganhador;
-            if(jogador1 > jogador2){
-                ganhador = localStorage.getItem("player1Index");
+        function decideGanhador() {
+            const jogador1 = parseInt(localStorage.getItem("player1Score") || "0");
+            const jogador2 = parseInt(localStorage.getItem("player2Score") || "0");
+            let ganhadorIndex;
+
+            if (jogador1 > jogador2) {
+                ganhadorIndex = localStorage.getItem("player1Index");
             } else {
-                ganhador = localStorage.getItem("player2Index");
+                ganhadorIndex = localStorage.getItem("player2Index");
             }
-            getNome(ganhador);
+            getNome(ganhadorIndex);
         }
 
         function voltarAoMenu() {
             window.location.href = "../html/menu.html";
         }
+
+        // Chama decideGanhador ao carregar a página
+        window.onload = decideGanhador;
     </script>
     <style>
         body {
