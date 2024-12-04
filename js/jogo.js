@@ -202,6 +202,7 @@
         //verifica se ha colisao
         
             if (distance < player1.radius + player2.radius) {
+             
                 const overlap = player1.radius + player2.radius - distance;
                 const moveX = (distX / distance) * overlap / 2; // Divide por 2 para mover cada jogador
                 const moveY = (distY / distance) * overlap / 2;
@@ -242,6 +243,9 @@
             const distance = Math.sqrt(distX * distX + distY * distY);
 
             if (distance  < player.radius + ball.radius ) {
+             const somChute = document.getElementById("somChute");
+        somChute.currentTime = 0; // Reinicia o som para que ele possa ser tocado novamente
+        somChute.play();
                 if (isShooting) {
                     const angle = Math.atan2(distY, distX);
                     ball.dx = -Math.cos(angle) * 8;
