@@ -45,7 +45,7 @@
             const jogador2 = parseInt(localStorage.getItem("player2Score") || "0");
             let ganhadorIndex;
 
-            if (jogador1 > jogador2) {
+            if (jogador1 < jogador2) {
                 ganhadorIndex = localStorage.getItem("player1Index");
             } else {
                 ganhadorIndex = localStorage.getItem("player2Index");
