@@ -125,7 +125,7 @@
         }
 
         function iniciaContador() {
-            let time = 5*60;
+            let time = 3*60;
             const countdownElement = document.getElementById("contador");
             const interval = setInterval(() => {
                 const minutes = Math.floor(time / 60);
